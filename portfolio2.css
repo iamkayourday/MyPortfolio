@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.hero {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 4em 0;
+    text-align: center;
+    margin-top: 60px; /* To avoid content hiding behind fixed header */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2em;
+    width: calc(33% - 2em);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 1em;
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 1em;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #4A90E2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 2em);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: calc(100% - 2em);
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
